@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>BC25_JS_Buoi 5</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <br><br><br>
+    <!-- Bài tập 1 -->
+    <section id="bt1" class="container row">
+        <div class="col-12">
+            <h2 class="text-danger">Bài tập 1: Xét tuyển sinh</h2>
+        </div>
+        <div class="card col-md-6 col-12">
+                <div class="card-header text-primary container">
+                    <h4>Xét điểm tuyển sinh</h4>
+                </div>
+                <div class="card-body">
+                    <div class="form-group row">
+                        <label class="col-12" for="">Vui lòng nhập các trường thông tin tương ứng vào ô</label>
+                        <div class="container">
+                            <h5>Điểm chuẩn xét tuyển</h5>
+                            <input id="diem__chuan" type="number" min="1" max="34" name="fname" required
+                                class="form-control col-12" name="" aria-describedby="helpId" placeholder="">
+                            <small id="helpId" class="form-text text-muted">Điểm chuẩn phải luôn lớn hơn 0 và không vượt
+                                quá
+                                34.5 điểm</small>
+                        </div>
+                        <div class="container">
+                            <br>
+                            <h5>Họ và tên học sinh</h5>
+                            <input id="ht" type="text" class="form-control col-12" name="fname" required
+                                action="process-action.html" aria-describedby="helpId" placeholder="Họ và tên">
+                            <br>
+                        </div>
+                        <h5 class="col-12">Điểm thi lần lượt của các môn</h5>
+                        <br>
+                        <div class="col-4">
+                            <p>Môn 1</p>
+                            <input id="mon__1" type="number" name="fname" required max="10" class="form-control col-12"
+                                name="" aria-describedby="helpId" placeholder="Điểm thi môn thứ 1">
+                        </div>
+                        <div class="col-4">
+                            <p>Môn 2</p>
+                            <input id="mon__2" type="number" name="fname" required max="10" class="form-control col-12"
+                                name="" aria-describedby="helpId" placeholder="Điểm thi môn thứ 2">
+                        </div>
+                        <div class="col-4">
+                            <p>Môn 3</p>
+                            <input id="mon__3" type="number" name="fname" required max="10" class="form-control col-12"
+                                name="" aria-describedby="helpId" placeholder="Điểm thi môn thứ 3">
+                        </div>
+                        <div class="col-6">
+                            <br>
+                            <h5>Khu vực ưu tiên</h5>
+                            <select class="form-control" id="khu__vuc">
+                                <option value="2">A</option>
+                                <option value="1">B</option>
+                                <option value="0.5">C</option>
+                                <option value="0">X</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <br>
+                            <h5>Đối tượng dự thi</h5>
+                            <select class="form-control" id="doi__tuong">
+                                <option value="2.5">1</option>
+                                <option value="1.5">2</option>
+                                <option value="1">3</option>
+                                <option value="0">0</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button id="xet__tuyen" class="btn btn-success">Xét tuyển</button>
+                <div id="ket__qua__xet" class="card-footer">
+                </div>
+        </div>
+        <div class="alert-info col-md-6 col-12">
+            <p>B1: Thiết lập layout có trường nhập tương ứng</p>
+            <p>B2: Thiết lập nút bấm khởi tạo chương trình</p>
+            <p>B3: Viết chương trình DOM giá trị và lấy giá trị so sánh điều kiện để đưa ra kết quả tương
+                ứng</p>
+            <p>B4: So sánh các giá trị Dom được theo các trường hợp 1/Nhập thiếu ô hoặc các ô không thỏa điều kiện giới hạn 2/Trúng tuyển nếu có tích 3 môn khác 0 và tổng điểm lớn hơn điểm chuẩn 3/Trượt nguyện vọng</p>
+            <p>B5: Xuất kết quả vào ô Footer</p>
+        </div>
+    </section>
+    <br><br><br>
+    <hr>
+    <br><br><br>
+    <!-- Bài tập 2 -->
+    <section id="bt2" class="container row">
+        <div class="col-12">
+            <h2 class="text-danger">Bài tập 2: Thanh toán tiền điện</h2>
+        </div>
+        <div class="card col-md-6 col-12">
+                <div class="card-header text-primary container">
+                    <h4>Tiền điện</h4>
+                </div>
+                <div class="card-body">
+                    <div class="form-group row">
+                        <label class="col-12" for="">Nhập các thông tin vào bên dưới</label>
+                        <h5>Họ và tên chủ hộ</h5>
+                        <input id="hvt" name="fname" required type="text" class="form-control col-12" name=""
+                            aria-describedby="helpId" placeholder="Họ và tên chủ hộ">
+                        <h5>Số điện tiêu thụ</h5>
+                        <input id="kw" type="number" name="fname" min="0" required class="form-control col-12"
+                            aria-describedby="helpId" placeholder="">
+                        <small id="helpId" class="form-text text-muted">Số điện tiêu thụ cần là 1 số lớn hơn 0</small>
+                    </div>
+                </div>
+                <button id="tinh__toan" class="btn btn-success">Xuất hóa đơn</button>
+                <div id="thanh__toan" class="card-footer">
+                </div>
+        </div>
+        <div class="alert-info col-md-6 col-12">
+            <p>B1: Thiết lập layout có trường nhập số điên và họ tên chủ nhà</p>
+            <p>B2: Thiết lập nút bấm khởi tạo chương trình</p>
+            <p>B3: Viết chương trình DOM giá trị các số đã nhập, trong trường hợp nhập thiếu (giá trị = "") hoặc số điện nhỏ hơn hoặc bằng 0 thì thông báo ra Footer</p>
+            <p>B4: Xét hạn mức số điện sử dụng và tính toán</p>
+            <p>B5: Xuất kết quả vào Footer</p>
+        </div>
+    </section>
+    <br><br><br>
+    <hr>
+    <br><br><br>
+
+
+    <div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <!-- My JS -->
+        <script src="./BC25_JS_B5.js"></script>
+    </div>
+
+
+</body>
+
+</html>
